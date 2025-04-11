@@ -1,5 +1,13 @@
 # DevTinder-web
-
+ - Create a Vite + React application
+ - Remove unnecessary code and create a Hello word app
+ - Install tailwind CSS and Daisy UI
+ - Add NavBar component ti App.jsx
+ - Create NabBar.jsx separate file
+ - Install react-router-dom
+ - Create BrowserRouter > Routes > Route
+ - Create and Outlet in your body component
+ - Create a Footer component
 
 
 
