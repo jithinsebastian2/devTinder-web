@@ -8,6 +8,7 @@ import { addUser } from '../utils/userSlice';
 const Login = () => {
   const [emailId, setEmailId] = useState('jithin@gmail.com');
   const [password, setPassword] = useState('Jithin@1234');
+  const [error, setError] = useState('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Login = () => {
         dispatch(addUser(res?.data?.data || {}));
         navigate('/');
     } catch (err) {
+        setError(err?.response?.data || 'Something went wrong');
         console.error(err);
     }
   };
@@ -56,6 +58,7 @@ const Login = () => {
                     />
                 </fieldset>
                 </div>
+                <p className='text-red-500'>{error}</p>
                 <div className="card-actions justify-center py-5">
                     <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                 </div>
