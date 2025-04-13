@@ -28,6 +28,7 @@
  - New page - view all my connections
  - New page - See all my connection requests
  - Feature - Accept/reject connection requests
+ - Send/Ignore the user card from the feed
 
 
 
