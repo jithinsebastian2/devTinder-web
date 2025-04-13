@@ -32,7 +32,7 @@ const Feed = () => {
         user: feed[0] || {},
       }}/>
     </div>
-  )
+  );
 }
 
-export default Feed
+export default Feed;

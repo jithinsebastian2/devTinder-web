@@ -19,7 +19,7 @@ const NavBar = () => {
       dispatch(removeUser());
       navigate('/login');
     } catch (err) {
-      console.log(err);
+      console.error(err);
       //Error logic: re-direct to error page
     }
   };
@@ -42,14 +42,19 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content bg-info-content rounded-box z-1 mt-3 w-52 p-2 shadow">
             <li>
               <Link to="/profile" className="justify-between">
                 Profile
-                <span className="badge">New</span>
+                {/* <span className="badge">New</span> */}
               </Link>
             </li>
-            <li><a>Settings</a></li>
+            <li>
+              <Link
+                to='/connections'
+              >
+              Connections</Link>
+            </li>
             <li><a onClick={handleLogout}>Logout</a></li>
           </ul>
         </div>
