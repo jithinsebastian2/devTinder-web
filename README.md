@@ -23,6 +23,11 @@
  - Logout feature
  - Get the feed and add the feed in the store
  - build the user card on feed
+ - Edit profile feature
+ - Show toast message on save of profile
+ - New page - view all my connections
+ - New page - See all my connection requests
+ - Feature - Accept/reject connection requests
 
 
 

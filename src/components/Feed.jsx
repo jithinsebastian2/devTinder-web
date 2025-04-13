@@ -21,9 +21,7 @@ const Feed = () => {
   }
 
   useLayoutEffect(() => {
-    if (!feed) {
-      getFeed();
-    }
+    getFeed();
   }, []);
 
   return (

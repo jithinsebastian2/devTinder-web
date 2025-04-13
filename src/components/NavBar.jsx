@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/constants';
 import axios from 'axios';
 import { removeUser } from '../utils/userSlice';
+import { removeFeed } from '../utils/feedSlice';
+import { emptyRequests } from '../utils/requestSlice';
+import { removeConnections } from '../utils/connectionSlice';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -17,6 +20,9 @@ const NavBar = () => {
         withCredentials: true,
       });
       dispatch(removeUser());
+      dispatch(removeFeed());
+      dispatch(emptyRequests());
+      dispatch(removeConnections());
       navigate('/login');
     } catch (err) {
       console.error(err);
@@ -54,6 +60,12 @@ const NavBar = () => {
                 to='/connections'
               >
               Connections</Link>
+            </li>
+            <li>
+              <Link
+                to='/requests'
+              >
+              Requests</Link>
             </li>
             <li><a onClick={handleLogout}>Logout</a></li>
           </ul>

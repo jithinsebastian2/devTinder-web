@@ -20,7 +20,9 @@ const Connections = () => {
   }
 
   useLayoutEffect(()=> {
+    // if (!connections) {
     fetchConnections();
+    // }
   });
 
   if (!connections) return;
@@ -33,6 +35,7 @@ const Connections = () => {
       <div className='flex flex-col text-center'>
         {connections.map(connection => {
           const {
+            _id= '',
             photoUrl='',
             firstName='',
             lastName= '',
@@ -42,7 +45,7 @@ const Connections = () => {
           } = connection;
           return (
           <div
-            key={`key-${connection.firstName}`}
+            key={`key-${_id}`}
             className='flex m-4 p-4 bg-base-200'  
           >
             <div><img className='rounded-full w-20 h-20' src={photoUrl} alt="" /></div>
