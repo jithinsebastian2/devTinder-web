@@ -133,7 +133,7 @@ const EditProfile = ({ user }) => {
                 </div>
             </div>
         </div>
-        <UserCard {...{user: profileFields}} />
+        <UserCard {...{flow: 'profile', user: profileFields}} />
         <div className="toast toast-top toast-center">
         {showToast && <div className="alert alert-success">
             <span>Profile Saved successfully.</span>

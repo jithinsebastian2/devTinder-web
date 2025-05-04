@@ -31,6 +31,19 @@
  - Send/Ignore the user card from the feed
 
 
+ # Deployment
+
+ - SignUp to AWS
+ - Launch Ec2 instance
+ - chmod 400 <secret>.pem
+ - Connect to the EC2 instance machine to the below command:
+   ssh -i "devTinder-secret.pem" ubuntu@ec2-13-53-46-214.eu-north-1.compute.amazonaws.com
+ - Install node by using the CURL command from node.js website (Install the same local node version on the Ec2 machine. Else it might cause version mismatch issues)
+ - Then exist/stop the machine using 'exist' command and run the EC2 connect command again
+ 
+
+
+
 
 
 
