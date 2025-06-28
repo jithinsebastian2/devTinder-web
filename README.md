@@ -39,8 +39,18 @@
  - Connect to the EC2 instance machine to the below command:
    ssh -i "devTinder-secret.pem" ubuntu@ec2-13-53-46-214.eu-north-1.compute.amazonaws.com
  - Install node by using the CURL command from node.js website (Install the same local node version on the Ec2 machine. Else it might cause version mismatch issues)
- - Then exist/stop the machine using 'exist' command and run the EC2 connect command again
- 
+ - Then exit/stop the machine using 'exit' command and run the EC2 connect command again
+ - Clone the devTinder-web and devTinder to the EC2 machine by using terminal git clone <repository url> command
+ - FrontEnd
+   - npm install
+   - npm run build
+   - sudo apt update - for Update the Ec2 ubuntu machine
+   - sudo apt install nginx - to install nginx on ubuntu, it will provide an http server on cloud
+   - sudo systemctl start nginx
+   - sudo systemctl enable nginx 
+   - copy code from dist(build files) to nginx http server(/var/www/html/)
+   - command: sudo scp -r dist/* /var/www/html/
+   - Enable port 80 on your EC2 instance for running the app on nginx server
 
 
 
